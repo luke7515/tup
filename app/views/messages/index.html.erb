@@ -1,0 +1,14 @@
+<h1>Hello This is Messaging Service</h1>
+<div class = "messages" >
+  <% @messages.each do |message| %>
+    <%= sync partial: 'text', resource: message %>
+
+
+  <%end%>
+  <%= sync_new partial: 'text', resource: Message.new%>
+</div>
+
+<%= form_for(:message, :remote => true, :url => {:action => 'create'}, authenticity_token: true) do |f| %>
+  <%= f.text_field(:body) %>
+  <%= submit_tag("SEND") %>
+<% end %>
