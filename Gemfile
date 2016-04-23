@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'faye'
 gem 'pusher'
 gem 'sync'
+gem 'thin', require: false
 gem 'coffee-script-source', '1.8.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
